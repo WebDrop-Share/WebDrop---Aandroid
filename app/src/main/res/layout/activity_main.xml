@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp" />
+
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@drawable/ic_refresh"
+        android:tint="#4285f4"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/downloads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="16dp"
+        android:src="@drawable/ic_folder"
+        android:tint="#4285f4"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/about"
+        android:layout_width="64dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="56dp"
+        android:alpha="0.3"
+        android:background="@android:color/white"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:progressTint="#4285f4"
+        tools:progress="33" />
+
+    <LinearLayout
+        android:id="@+id/about_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#4285f4"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="4dp"
+            android:padding="16dp"
+            android:src="@drawable/ic_close" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_webdrop" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/webdrop_project_by"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/nostep_github"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_github" />
+
+            <ImageView
+                android:id="@+id/nostep_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="8dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_twitter" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</FrameLayout>

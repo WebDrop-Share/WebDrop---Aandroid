@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    defaultConfig {
+        applicationId "net.webdrop"
+        minSdkVersion 21
+        compileSdk 34
+        targetSdkVersion 34
+        versionCode 12
+        versionName "v1.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            applicationIdSuffix ".debug"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    namespace 'net.webdrop'
+}
+
+dependencies {
+}
